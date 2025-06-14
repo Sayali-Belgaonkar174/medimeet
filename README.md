@@ -35,6 +35,8 @@ MediMeetis a full-stack healthcare web application designed to streamline intera
 - **Database:** MySQL & MongoDB (for scalable record management)
 - **Deployment:** GitHub Pages (Frontend), Render/Heroku (Backend)
 
+  Open this link in browser: https://sayali-belgaonkar174.github.io/medimeet/
+
 Team Name:#include
 Team members:
 1.Pradnya Sawant
