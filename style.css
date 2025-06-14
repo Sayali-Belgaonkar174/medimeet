@@ -1,0 +1,188 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+   background: linear-gradient(to bottom, #5dfea0, #60e965, #349ef4);
+  color: #000000;
+  padding: 20px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #16be5c, #36a1f8);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+}
+
+input, select, textarea, button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #3625ee;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #1505c6;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  justify-items: center;
+  padding: 10px;
+}
+
+.calendar-day {
+  width: 180px;
+  height: 80px;
+  background-color: #1e83ee;
+  border: 2px solid #002b48;
+  text-align:left;
+  font-weight: bold;
+  border-radius: .4rem;
+  cursor: pointer;
+  padding: 10px ;
+  font-size: 18px;
+
+}
+
+.calendar-day:hover {
+  background-color: #003d7a;
+}
+
+.calendar-day.header {
+  background-color: #000000;
+  color: white;
+  cursor: default;width: 180px;
+  height: 40px;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+  border: #000000;
+  cursor: default;
+}
+
+#appointments-list-ul {
+  list-style: none;
+  padding: 0;
+}
+
+#appointments-list-ul li {
+  padding: 5px;
+  background-color: #67cfdb;
+  margin: 5px;
+  border-radius: 4px;
+  color: #000000;
+}
+
+#patient-details-modal {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #4f4242;
+}
+
+#Login-as-Patient {
+  height: 80px;
+  width: 340px;
+  background-color: #47ddffb9;
+  font-size: 30px;
+  border-radius: 2rem;
+  color: rgb(0, 0, 0);
+  border : 2px solid rgb(16, 142, 181);
+}
+
+#Login-as-Doctor {
+  height: 80px;
+  width: 340px;
+  font-size: 30px;
+  background-color: #37d659c8;
+  border-radius: 2rem;
+  color: rgb(0, 0, 0);
+  border : 2px solid rgb(9, 120, 53);
+}
+#Login-as-SuperAdmin {
+  height: 80px;
+  width: 340px;
+  font-size: 30px;
+  background-color: #37d659c8;;
+  border-radius: 2rem;
+  color: rgb(0, 0, 0);
+  border : 2px solid rgb(9, 120, 53);
+}
+
+#Login-as-Nurse {
+  height: 80px;
+  width: 340px;
+  background-color: #47ddffb9;
+  font-size: 30px;
+  border-radius: 2rem;
+  color: rgb(9, 2, 2);
+  border : 2px solid rgb(16, 142, 181);
+}
+h1{
+
+  font-size: 60px;
+}
+#login-email,#login-password{
+  width: 590px;
+  height:30px;
+  border-radius: 1rem;
+}
+.abc{
+  height:30px;
+  width:590px;
+}
+#signup-name,#signup-email,#signup-password{
+   width: 590px;
+  height:30px;
+  border-radius: 1rem;
+}
+#appointment-date,#appointment-time,#doctor-name-input,#doctor-name-input,#doctor-email-input{
+  width: 590px;
+  height:30px;
+  border-radius: 1rem;
+}
+#medical-text{
+   width: 590px;
+  height:100px;
+  border-radius: 1rem;
+}
+#xy{
+  color:#000000;
+  font-size: 25px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medi Meet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome To Medi-Meet</h1>
+
+  <div id="role-selection">
+    <button onclick="showAuth('patient')" id="Login-as-Patient">Login as Patient</button>
+    <button onclick="showAuth('doctor')" id="Login-as-Doctor">Login as Doctor</button>
+    <button onclick="showAuth('nurse')" id="Login-as-Nurse">Login as Nurse</button>
+    <button onclick="showAuth('superadmin')" id="Login-as-SuperAdmin">Login as Super Admin</button>
+  </div>
+
+  <div id="auth-section" class="d-none">
+    <h2 id="auth-heading">Login as</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button class="abc" type="button" onclick="login()" >Login</button>
+      <p><b><centre>
+
+        Don't have an account?
+        <a href="#" onclick="toggleAuth(true)" >Sign up</a></centre></b>
+      </p>
+    </form>
+    <form id="signup-form" class="d-none">
+      <input type="text" id="signup-name" placeholder="Name" />
+      <input type="email" id="signup-email" placeholder="Email" />
+      <input type="password" id="signup-password" placeholder="Password" />
+      <button type="button" onclick="signup()" >Sign Up</button>
+      <p>
+        Already have an account?
+        <a href="#" onclick="toggleAuth(false)" >Login</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Patient Dashboard -->
+  <div id="patient-dashboard" class="d-none">
+    <h2>Welcome, <span id="patient-name"></span></h2>
+    <h3>Book Appointment</h3>
+    <input type="date" id="appointment-date" />
+    <input type="time" id="appointment-time" />
+    <input type="text" id="doctor-name-input" placeholder="Doctor Name" />
+    <input type="email" id="doctor-email-input" placeholder="Doctor Email" />
+    <textarea id="medical-text" placeholder="Medical History"></textarea>
+    <input type="file" id="medical-file" />
+    <button onclick="bookAppointment()">Book Appointment</button>
+    
+    <h3>Your Appointments</h3>
+    <ul id="appointments-list-ul"></ul>
+    <h3>Your Medical History</h3>
+    <div id="patient-history-list"></div>
+    <button onclick="logout()">Logout</button>
+  </div>
+ 
+  <!-- Doctor Dashboard -->
+  <div id="doctor-dashboard" class="d-none">
+    <h2>Welcome Dr. <span id="doctor-name"></span></h2>
+    <div class="calendar-container" id="calendar-days"></div>
+    <div id="patients-list" class="d-none">
+      <h3>Patients on <span id="selected-day"></span></h3>
+      <div id="patients-for-day"></div>
+      <div id="patient-details-modal" class="d-none">
+        <h3>Patient Details</h3>
+        <p><strong>Name:</strong> <span id="detail-name"></span></p>
+        <p><strong>Email:</strong> <span id="detail-email"></span></p>
+        <p><strong>History:</strong> <span id="detail-history"></span></p>
+        <a id="detail-file" target="_blank">View File</a><br /><br />
+        <textarea id="new-history" placeholder="Update Medical History"></textarea>
+        <textarea id="new-prescription" placeholder="Add Prescription"></textarea>
+        <button onclick="updatePatientHistory()">Save</button>
+        <button onclick="closePatientDetailsModal()">Close</button>
+      </div>
+    </div>
+    <label>
+  <input type="checkbox" id="confirm-appointment-checkbox"><h1 id="xy"> Confirm Appointment</h1>
+  <h3>Assign Task to Nurse</h3>
+<input type="text" id="nurse-name-task" placeholder="Nurse Name" />
+<input type="email" id="nurse-email-task" placeholder="Nurse Email" />
+<input type="text" id="task-desc" placeholder="Task (e.g., Check BP)" />
+<button onclick="assignTaskToNurse()">Assign Task</button>
+
+</label>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Nurse Dashboard -->
+  <div id="nurse-dashboard" class="d-none">
+    <h2>Welcome Nurse <span id="nurse-name"></span></h2>
+    <h3>Assigned Tasks & Prescriptions</h3>
+    <ul id="nurse-tasks-list"></ul>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Super Admin Dashboard -->
+  <div id="superadmin-dashboard" class="d-none">
+    <h2>Super Admin Panel</h2>
+    <h3>Manage Users</h3>
+    <button onclick="loadUsers()">Refresh User List</button>
+    <ul id="users-list"></ul>
+    <h3>Add New User</h3>
+    <input type="text" id="new-user-name" placeholder="Name" />
+    <input type="email" id="new-user-email" placeholder="Email" />
+    <select id="new-user-role">
+      <option value="patient">Patient</option>
+      <option value="doctor">Doctor</option>
+      <option value="nurse">Nurse</option>
+    </select>
+    <input type="password" id="new-user-password" placeholder="Password" />
+    <button onclick="addUser()">Add User</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+ 
+  
+<div id="doctor-task-list"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
