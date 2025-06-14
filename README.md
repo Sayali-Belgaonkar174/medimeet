@@ -9,16 +9,16 @@ MediMeetis a full-stack healthcare web application designed to streamline intera
 
 ###  Patient
 - Login/Signup with personal details
-- Book, cancel, or modify appointments (conflict-free scheduling)
-- Upload and download medical history files (PDF, images, etc.)
+- Book, cancel appointments(conflict-free scheduling)
+- Upload medical history files (PDF, images, etc.)
 - View appointment calendar and prescriptions
-- Convert history/prescriptions to downloadable PDF
+
 
 ###  Doctor
 - Login/Signup with specialization
 - View daily/monthly calendar of appointments
 - Access and update individual patient history
-- Upload prescriptions with date and time
+- Upload prescriptions 
 - Assign tasks to nurses
 
 ###  Nurse
@@ -30,10 +30,10 @@ MediMeetis a full-stack healthcare web application designed to streamline intera
 
 ##  Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, Express.js
-- **Database:** MySQL & MongoDB (for scalable record management)
-- **Deployment:** GitHub Pages (Frontend), Render/Heroku (Backend)
+Frontend:HTML, CSS, JavaScript
+ Backend: Node.js, Express.js
+ Database: MySQL 
+Deployment:GitHub Pages (Frontend), Render/Heroku (Backend)
 
   Open this link in browser: https://sayali-belgaonkar174.github.io/medimeet/
 
